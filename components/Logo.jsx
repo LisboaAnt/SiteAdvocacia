@@ -5,18 +5,19 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-const Logo = () => {
+const Logo = ({ className }) => {
   return (
     <Link href="/">
       <div className='flex items-center justify-content-center'>
         <Image
-        src="/logo.png"
-        width={70}
-        height={70}
+        src="/imgs/logo.png"
+        width={200}
+        height={200}
         priority alt=""
+        className='w-[60px] h-[56px] rounded-sm'
         />
       
-      <h1 className='pl-5 text-xl'>ELAINE MEROLA </h1>
+      <h1 className={`pl-5 text-xl ${className ?? 'text-white'}`}>Advocacia </h1>
       </div>
 
     </Link>

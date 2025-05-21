@@ -32,7 +32,7 @@ const infoData =[
 
 const About = () => {
   return (
-    <section className="pb-12 min-h-screen  xl:py-14">
+    <section className="pb-12 min-h-screen  xl:py-14 text-white">
       <div className="container mx-auto ">
         <div className="flex flex-col xl:flex-row">
           {/* Image */}
@@ -51,13 +51,9 @@ const About = () => {
             {/* Content */}
             <div className="text-lg mt-0 xl:mt-3">
               <div className="text-center xl:text-left"> 
-                <p className="max-w-xl mx-auto xl:mx-0 text-justify">
-                  Tudo começou quando tinha apenas <strong>19 anos</strong> e fui trabalhar em um escritório de advocacia. Lá, me apaixonei pelo Direito e descobri minha vocação.  
-                  Após iniciar a faculdade, já comecei a atender clientes, escrever peças processuais e estagiar, inclusive assistindo audiências, fazendo acompanhamento processual e demais atribuições inerentes à área jurídica.  
-                </p>
 
                 <p className="max-w-xl mx-auto xl:mx-0 text-justify">
-                  Hoje, conto com mais de <strong>30 anos de experiência</strong> na área jurídica e trabalho no meu próprio escritório desde <strong>2013</strong>.  
+                  Conto com mais de <strong>30 anos de experiência</strong> na área jurídica e trabalho no meu próprio escritório desde <strong>2013</strong>.  
                   Desde o início da minha jornada acadêmica, sempre soube que essa seria mais do que uma carreira; seria uma forma de <strong>contribuir para a justiça e o bem-estar da sociedade</strong>.  
                 </p>
 

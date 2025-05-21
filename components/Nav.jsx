@@ -11,9 +11,6 @@ const links = [
     { path: '/contact', name: 'Contato'},
 ]
 
-//Nav Faz a animacao da underline red
-//Next Hooks
-
 const Nav = ({ containerStyles, linkStyles, underlineStyles, closeSheet }) => {
     const path = usePathname();
 
@@ -26,23 +23,27 @@ const Nav = ({ containerStyles, linkStyles, underlineStyles, closeSheet }) => {
     return (
         <div className={`${containerStyles}`}>
             {links.map((link, index) => (
-                <Link
-                    key={index}
-                    href={link.path}
-                    className={`capitalize ${linkStyles}`}
-                    onClick={handleLinkClick}
-                >
-                    {link.path === path && (
-                        <motion.span
-                            initial={{ y: '-100%'}}
-                            animate={{ y: 0 }}
-                            transition={{ type: 'tween' }}
-                            layoutId='underline'
-                            className={`${underlineStyles}`}
-                        />
+                <React.Fragment key={link.path}>
+                    <Link
+                        href={link.path}
+                        className={`capitalize ${linkStyles}`}
+                        onClick={handleLinkClick}
+                    >
+                        {link.path === path && (
+                            <motion.span
+                                initial={{ y: '-100%'}}
+                                animate={{ y: 0 }}
+                                transition={{ type: 'tween' }}
+                                layoutId='underline'
+                                className={`${underlineStyles}`}
+                            />
+                        )}
+                        {link.name}
+                    </Link>
+                    {index < links.length - 1 && (
+                        <span className="inline text-white text-lg select-none -ml-4 -mr-4">●</span>
                     )}
-                    {link.name}
-                </Link>
+                </React.Fragment>
             ))}
         </div>
     );

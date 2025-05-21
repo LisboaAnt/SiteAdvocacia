@@ -27,11 +27,7 @@ export const Header = () => {
   )
   return (
     <header
-    className={`${
-      header
-      ? 'py-4  shadow-lg dark:bg-accent bg-white/90'
-      : 'py-6 bg-transparent '  
-    } sticky top-0 z-30 transition-all `}
+    className={`py-6 bg-transparent sticky top-0 z-30 transition-all backdrop-blur-sm`}
     >
       <div className="container mx-auto ">
         <div className="flex justify-between items-center">
@@ -41,7 +37,7 @@ export const Header = () => {
             {/*Nav Section*/}
             <Nav
             containerStyles='hidden xl:flex gap-x-8 items-center'
-            linkStyles='relative hover:text-primary transition-all'
+            linkStyles='relative hover:text-primary transition-all text-white'
             underlineStyles='absolute left-0 top-full h-[2px] bg-primary w-full'
             />
             {/*Mobile Navigation*/}

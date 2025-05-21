@@ -72,7 +72,7 @@ const services = () => {
       <div className="container mx-auto px-4">
       
       <div className="flex justify-center text-center">
-        <h2 className="section-title text-primary-foreground mb-8 xl:mb-16 break-words whitespace-normal max-w-xl text-balance">
+        <h2 className="section-title text-white mb-8 xl:mb-16 break-words whitespace-normal max-w-xl text-balance">
           Nossos Serviços Jurídicos
         </h2>
       </div>
@@ -80,7 +80,7 @@ const services = () => {
 
         <div className="mx-auto max-w-3xl mb-16 text-center">
           <Fade direction="up" delay={0} cascade damping={0.1} triggerOnce={true}>
-            <p className="text-lg leading-8 text-gray-600">
+            <p className="text-lg leading-8 text-gray-100">
               Na busca por justiça e segurança jurídica, oferecemos uma atuação completa, 
               eficiente e personalizada, sempre focada nas suas necessidades. Nossa equipe 
               está pronta para orientá-lo com clareza e comprometimento.

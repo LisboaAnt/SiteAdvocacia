@@ -2,7 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-
+/* Serlio Std Font */
+@font-face {
+  font-family: 'Serlio Std';
+  src: url('/fonts/SerlioStd-Regular.woff2') format('woff2'),
+       url('/fonts/SerlioStd-Regular.woff') format('woff'),
+       url('/fonts/SerlioStd-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 @layer base {
   :root {
@@ -99,4 +108,8 @@
 
 .swiper-pagination-bullet-active {
   @apply bg-primary !important
+}
+
+.serlio-font {
+  font-family: 'Serlio Std', serif;
 }
