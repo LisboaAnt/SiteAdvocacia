@@ -5,30 +5,7 @@ import { Fade } from "react-awesome-reveal"
 
 import HeroImg from '@/components/HeroImg'
 import React from 'react'
-import { RiRidingFill, RiUserHeartFill, RiStarHalfSLine, RiVidiconFill, RiVipCrown2Fill, RiSendPlaneFill } from 'react-icons/ri'
 
-const infoData =[
-  {
-    icon: <RiUserHeartFill size={20}/>,
-    text: 'Mrs Smith',
-  },
-  {
-    icon: <RiSendPlaneFill size={20}/>,
-    text: '+55 69 992410109',
-  },
-  {
-    icon: <RiVidiconFill size={20}/>,
-    text: 'photography@gmail.com',
-  },
-  {
-    icon: <RiStarHalfSLine size={20}/>,
-    text: 'Born on 23 Jan, 2000',
-  },
-  {
-    icon: <RiRidingFill size={20}/>,
-    text: '22, Ella Statu, Texas, Us',
-  },
-]
 
 const About = () => {
   return (
