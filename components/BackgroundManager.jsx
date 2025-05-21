@@ -4,8 +4,12 @@ import { usePathname } from 'next/navigation';
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
+// Ordem das páginas no menu, para determinar direção da animação
+const pageOrder = ['/', '/about', '/services', '/contact'];
+
 const BackgroundManager = () => {
   const pathname = usePathname();
+  const previousPathRef = useRef(pathname);
   const isFirstLoad = useRef(true);
   const [backgrounds, setBackgrounds] = useState({
     current: '/imgs/bg-texture.png',
@@ -13,7 +17,6 @@ const BackgroundManager = () => {
     direction: 1 // 1 para slide da direita, -1 para slide da esquerda
   });
   
-  // Efeito que roda apenas uma vez na montagem para marcar que não é mais a primeira carga
   useEffect(() => {
     // Pequeno timeout para garantir que tudo esteja carregado
     const timer = setTimeout(() => {
@@ -24,16 +27,40 @@ const BackgroundManager = () => {
   }, []);
   
   useEffect(() => {
-    // Altera o fundo baseado na rota atual
-    const newBg = pathname === '/services' ? '/imgs/servicos-fundo.jpg' : '/imgs/bg-texture.png';
-    
-    // Só atualiza se o fundo for diferente
-    if (newBg !== backgrounds.current) {
-      setBackgrounds(prev => ({
-        current: newBg,
-        previous: isFirstLoad.current ? null : prev.current, // Não guarda o anterior se for primeira carga
-        direction: pathname === '/services' ? 1 : -1
-      }));
+    // Se o pathname mudou
+    if (pathname !== previousPathRef.current) {
+      // Altera o fundo baseado na rota atual
+      const newBg = pathname === '/services' ? '/imgs/servicos-fundo.jpg' : '/imgs/bg-texture.png';
+      
+      // Determina a direção do slide baseada na ordem do menu
+      let direction = 1; // padrão: direita para esquerda
+      
+      const currentIndex = pageOrder.indexOf(pathname);
+      const previousIndex = pageOrder.indexOf(previousPathRef.current);
+      
+      if (currentIndex !== -1 && previousIndex !== -1) {
+        if (previousPathRef.current === '/services' && pathname === '/contact') {
+          direction = 1; // Da esquerda para direita
+        }
+        else if (previousPathRef.current === '/contact' && pathname === '/services') {
+          direction = -1; // Da direita para esquerda
+        }
+        else {
+          direction = currentIndex > previousIndex ? 1 : -1;
+        }
+      }
+      
+      // Só atualiza se o fundo for diferente
+      if (newBg !== backgrounds.current) {
+        setBackgrounds(prev => ({
+          current: newBg,
+          previous: isFirstLoad.current ? null : prev.current, // Não guarda o anterior se for primeira carga
+          direction: direction
+        }));
+      }
+      
+      // Atualiza a referência da rota anterior
+      previousPathRef.current = pathname;
     }
   }, [pathname, backgrounds.current]);
 
@@ -85,4 +112,4 @@ const BackgroundManager = () => {
   );
 };
 
-export default BackgroundManager; 
+export default BackgroundManager;
