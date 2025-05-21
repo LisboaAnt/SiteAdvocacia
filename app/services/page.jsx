@@ -108,7 +108,7 @@ const services = () => {
         </div>
         <div className="mt-6 flex justify-center">
           <Link href="/contact">
-            <Button className="bg-primary hover:bg-primary/90 text-white">
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white">
               Agendar Consulta
             </Button>
           </Link>
