@@ -44,10 +44,10 @@ const Footer = () => {
                             </div>
                             <div className="flex items-start gap-3">
                                 <EnvelopeIcon className="h-5 w-5 text-white flex-shrink-0 mt-1" />
-                                <a href="mailto:elaine@meroladecarvalhoadvocacia@gmail.com" className="text-white hover:text-gray-200 transition-colors break-all">
+                                <a href="mailto:elaine@meroladecarvalhoadvocacia.com" className="text-white hover:text-gray-200 transition-colors break-all">
                                     <EditableText
                                         id="footer-email"
-                                        defaultValue="elaine@meroladecarvalhoadvocacia@gmail.com"
+                                        defaultValue="elaine@meroladecarvalhoadvocacia.com"
                                         as="span"
                                     />
                                 </a>

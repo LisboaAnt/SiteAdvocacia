@@ -68,12 +68,12 @@ const contact = () => {
                   <EnvelopeIcon className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                   <div className="max-w-full overflow-hidden">
                     <a 
-                      href="mailto:elaine@meroladecarvalhoadvocacia@gmail.com" 
+                      href="mailto:elaine@meroladecarvalhoadvocacia.com" 
                       className="text-gray-600 hover:text-primary transition-colors break-all"
                     >
                       <EditableText
                         id="contact-email"
-                        defaultValue="elaine@meroladecarvalhoadvocacia@gmail.com"
+                        defaultValue="elaine@meroladecarvalhoadvocacia.com"
                         as="span"
                       />
                     </a>
