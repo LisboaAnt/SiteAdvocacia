@@ -11,9 +11,11 @@ import { Button } from '@/components/ui/button'
 import { ToastAction } from '@/components/ui/toast'
 import { useToast } from '@/components/ui/use-toast'
 import Link from "next/link"
+import EditableText from '@/components/EditableText'
 
 const areasJuridicas = [
   {
+    id: 'direito-previdenciario',
     titulo: 'Direito Previdenciário',
     descricao: 'Planejamos e acompanhamos toda a sua jornada previdenciária',
     servicos: [
@@ -24,6 +26,7 @@ const areasJuridicas = [
     ]
   },
   {
+    id: 'direito-civil',
     titulo: 'Direito Civil',
     descricao: 'Oferecemos suporte jurídico nas suas relações civis e patrimoniais',
     servicos: [
@@ -34,6 +37,7 @@ const areasJuridicas = [
     ]
   },
   {
+    id: 'direito-trabalho',
     titulo: 'Direito do Trabalho',
     descricao: 'Atuamos em favor de empregadores e empregados, com foco em soluções assertivas',
     servicos: [
@@ -44,6 +48,7 @@ const areasJuridicas = [
     ]
   },
   {
+    id: 'direito-penal',
     titulo: 'Direito Penal',
     descricao: 'Garantimos a sua ampla defesa em todas as fases do processo criminal',
     servicos: [
@@ -54,6 +59,7 @@ const areasJuridicas = [
     ]
   },
   {
+    id: 'direito-familia',
     titulo: 'Direito de Família',
     descricao: 'Cuidamos de questões familiares com sensibilidade e empatia',
     servicos: [
@@ -72,33 +78,53 @@ const services = () => {
       <div className="container mx-auto px-4">
       
       <div className="flex justify-center text-center">
-        <h2 className="section-title text-white mb-8 xl:mb-16 break-words whitespace-normal max-w-xl text-balance">
-          Nossos Serviços Jurídicos
-        </h2>
+        <EditableText
+          id="services-title"
+          defaultValue="Nossos Serviços Jurídicos"
+          as="h2"
+          className="section-title text-white mb-8 xl:mb-16 break-words whitespace-normal lg:max-w-xl max-w-sm text-balance"
+        />
       </div>
 
 
         <div className="mx-auto max-w-3xl mb-16 text-center">
           <Fade direction="up" delay={0} cascade damping={0.1} triggerOnce={true}>
-            <p className="text-lg leading-8 text-gray-100">
-              Na busca por justiça e segurança jurídica, oferecemos uma atuação completa, 
-              eficiente e personalizada, sempre focada nas suas necessidades. Nossa equipe 
-              está pronta para orientá-lo com clareza e comprometimento.
-            </p>
+            <EditableText
+              id="services-intro"
+              defaultValue="Na busca por justiça e segurança jurídica, oferecemos uma atuação completa, eficiente e personalizada, sempre focada nas suas necessidades. Nossa equipe está pronta para orientá-lo com clareza e comprometimento."
+              as="p"
+              className="text-lg leading-8 text-gray-100"
+              multiline={true}
+            />
           </Fade>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {areasJuridicas.map((area, index) => (
-              <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
+              <div key={area.id} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
                 <div className="flex-grow">
-                  <h3 className="text-xl font-bold text-primary-foreground mb-4">{area.titulo}</h3>
-                  <p className="text-gray-600 mb-6">{area.descricao}</p>
+                  <EditableText
+                    id={`area-titulo-${area.id}`}
+                    defaultValue={area.titulo}
+                    as="h3"
+                    className="text-xl font-bold mb-4 text-black"
+                  />
+                  <EditableText
+                    id={`area-descricao-${area.id}`}
+                    defaultValue={area.descricao}
+                    as="p"
+                    className="text-gray-600 mb-6"
+                  />
                   <ul className="space-y-3">
-                    {area.servicos.map((servico) => (
-                      <li key={servico} className="flex items-start gap-x-3">
+                    {area.servicos.map((servico, i) => (
+                      <li key={`${area.id}-servico-${i}`} className="flex items-start gap-x-3">
                         <CheckIcon className="h-5 w-5 flex-none text-primary mt-1" />
-                        <span className="text-gray-600">{servico}</span>
+                        <EditableText
+                          id={`servico-${area.id}-${i}`}
+                          defaultValue={servico}
+                          as="span"
+                          className="text-gray-600"
+                        />
                       </li>
                     ))}
                   </ul>
@@ -109,7 +135,11 @@ const services = () => {
         <div className="mt-6 flex justify-center">
           <Link href="/contact">
             <Button className="bg-orange-500 hover:bg-orange-600 text-white">
-              Agendar Consulta
+              <EditableText
+                id="services-cta"
+                defaultValue="Agendar Consulta"
+                as="span"
+              />
             </Button>
           </Link>
         </div>

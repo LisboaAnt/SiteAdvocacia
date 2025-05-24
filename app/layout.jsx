@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import Footer from "@/components/Footer";
 import BackgroundManager from "@/components/BackgroundManager";
+import AdminBar from "@/components/AdminBar";
 
 //Added Toast Message
 import { Toaster } from "@/components/ui/toaster";
@@ -84,16 +85,25 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt" suppressHydrationWarning>
       <body className={SenFont.className}>
-        <div className="relative">
-          {/* Componente de gerenciamento de background com animação */}
-          <BackgroundManager />
-          
-          <Header/>
-          <Template>
-            {children}  
-          </Template>
-          <Footer/>
-        </div>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="relative">
+            {/* Componente de gerenciamento de background com animação */}
+            <BackgroundManager />
+            
+            <Header/>
+            <Template>
+              {children}  
+            </Template>
+            <Footer/>
+            <AdminBar />
+            <Toaster />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
