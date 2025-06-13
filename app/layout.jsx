@@ -83,6 +83,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt" suppressHydrationWarning>
+        <head>
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-K77WD8PJJ3" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-K77WD8PJJ3');
+            `
+          }}
+        />
+      </head>
       <body className={SenFont.className}>
         <div className="relative">
           {/* Componente de gerenciamento de background com animação */}
