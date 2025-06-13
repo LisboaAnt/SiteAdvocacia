@@ -26,7 +26,7 @@ const contact = () => {
   
               <div className="flex flex-col sm:flex-row gap-4 hidden sm:flex">
                 <Link
-                  href="https://maps.google.com/?q=R.+dos+Guainumbis,+698+-+Vila+Costa+e+Silva"
+                  href="https://maps.app.goo.gl/Mm13D8yRRwSJk6Ut8"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
