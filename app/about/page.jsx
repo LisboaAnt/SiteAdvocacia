@@ -5,7 +5,7 @@ import { Fade } from "react-awesome-reveal"
 
 import HeroImg from '@/components/HeroImg'
 import React from 'react'
-
+import Head from 'next/head'
 
 const About = () => {
   return (
@@ -30,14 +30,11 @@ const About = () => {
               <div className="text-center xl:text-left"> 
 
                 <p className="max-w-xl mx-auto xl:mx-0 text-justify">
-                  Conto com mais de <strong>30 anos de experiência</strong> na área jurídica e trabalho no meu próprio escritório desde <strong>2013</strong>.  
-                  Desde o início da minha jornada acadêmica, sempre soube que essa seria mais do que uma carreira; seria uma forma de <strong>contribuir para a justiça e o bem-estar da sociedade</strong>.  
+                  Conto com mais de 30 anos de experiência na área jurídica e trabalho no meu próprio escritório desde 2013. Desde o início da minha jornada acadêmica, sempre soube que essa seria mais do que uma carreira; seria uma forma de contribuir para a justiça e o bem-estar da sociedade.
                 </p>
 
                 <p className="max-w-xl mx-auto xl:mx-0 text-justify">
-                  Durante minha formação, explorei diversas áreas do Direito, o que me permitiu desenvolver uma <strong>compreensão abrangente</strong> dos desafios e nuances da profissão.  
-                  Hoje, mais do que nunca, percebo a necessidade da sociedade de <strong>resolver seus conflitos de forma amigável e pacífica</strong>.  
-                  Para atender a essa demanda, estou cursando <strong>pós-graduação</strong> nessa área de resolução de conflitos e, em breve, ofereceremos as <strong>Constelações Familiares Sistêmicas</strong>, que podem ser aplicadas a qualquer processo, situação e conflito.  
+                  Durante minha formação, explorei diversas áreas do Direito, o que me permitiu desenvolver uma compreensão abrangente dos desafios e nuances da profissão. Hoje, mais do que nunca, percebo a necessidade da sociedade de resolver seus conflitos de forma amigável e pacífica. Para atender a essa demanda, estou cursando pós-graduação nessa área de resolução de conflitos.
                 </p>
               </div>
             </div>

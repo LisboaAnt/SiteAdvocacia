@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import Footer from "@/components/Footer";
 import BackgroundManager from "@/components/BackgroundManager";
+import StructuredData from "@/components/StructuredData";
 
 //Added Toast Message
 import { Toaster } from "@/components/ui/toaster";
@@ -26,33 +27,42 @@ export const metadata = {
   title: "Elaine Merola Advocacia | Escritório de Advocacia em Campinas-SP",
   description: "Nossos Serviços Jurídicos: Atuação completa, eficiente e personalizada em Direito Previdenciário (planejamento de aposentadoria, revisão de benefícios, INSS), Direito Civil (contratos, responsabilidade civil, sucessões), Direito do Trabalho (reclamações, rescisões, negociações), Direito Penal (defesa criminal, inquéritos, habeas corpus) e Direito de Família (divórcios, guarda, pensão, mediação). Mais de 30 anos de experiência em Campinas-SP.",
   keywords: [
-    "advocacia",
-    "escritório de advocacia",
+    "advocacia Campinas",
     "advogado Campinas",
-    "direito de família",
-    "direito cível",
-    "direito trabalhista",
-    "direito previdenciário",
-    "direito penal",
-    "constelação familiar",
+    "advogada Campinas",
+    "escritório de advocacia Campinas",
+    "advocacia em Campinas SP",
+    "advogado Centro Campinas",
+    "advocacia Avenida Campos Sales",
+    "direito de família Campinas",
+    "direito cível Campinas",
+    "direito trabalhista Campinas",
+    "direito previdenciário Campinas",
+    "direito penal Campinas",
+    "advogado INSS Campinas",
+    "advogado trabalhista Campinas",
+    "advogado família Campinas",
+    "advogado previdenciário Campinas",
+    "advogado criminal Campinas",
     "resolução de conflitos",
     "planejamento de aposentadoria",
-    "revisão de benefícios",
-    "INSS",
-    "contratos",
+    "revisão de benefícios INSS",
+    "contratos Campinas",
     "responsabilidade civil",
-    "sucessão",
-    "reclamação trabalhista",
-    "rescisão",
+    "sucessão Campinas",
+    "reclamação trabalhista Campinas",
+    "rescisão trabalhista",
     "negociação extrajudicial",
-    "defesa criminal",
-    "habeas corpus",
-    "divórcio",
-    "guarda de filhos",
-    "pensão alimentícia",
-    "mediação familiar",
+    "defesa criminal Campinas",
+    "habeas corpus Campinas",
+    "divórcio Campinas",
+    "guarda de filhos Campinas",
+    "pensão alimentícia Campinas",
+    "mediação familiar Campinas",
     "Elaine Merola",
-    "Merola de Carvalho"
+    "Merola de Carvalho",
+    "advocacia região de Campinas",
+    "advogado interior SP"
   ],
   author: "Elaine Merola de Carvalho",
   robots: "index, follow",
@@ -98,6 +108,8 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={SenFont.className}>
+        {/* Structured Data */}
+        <StructuredData />
         <div className="relative">
           {/* Componente de gerenciamento de background com animação */}
           <BackgroundManager />
