@@ -13,7 +13,7 @@ export const metadata = {
   openGraph: {
     title: "Sobre Elaine Merola | Advogada com 30+ Anos de Experiência em Campinas-SP",
     description: "Conheça a trajetória da advogada Elaine Merola de Carvalho. Mais de 30 anos de experiência na área jurídica em Campinas-SP.",
-    url: "https://site-advocacia-mu.vercel.app/about",
+    url: "https://www.meroladecarvalhoadvocacia.com/about",
   }
 }
 

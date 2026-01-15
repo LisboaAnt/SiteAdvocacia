@@ -5,6 +5,6 @@ export default function robots() {
       allow: '/',
       disallow: ['/api/'],
     },
-    sitemap: 'https://site-advocacia-mu.vercel.app/sitemap.xml',
+    sitemap: 'https://www.meroladecarvalhoadvocacia.com/sitemap.xml',
   };
 }

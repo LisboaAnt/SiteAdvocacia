@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://site-advocacia-mu.vercel.app';
+  const baseUrl = 'https://www.meroladecarvalhoadvocacia.com';
   
   const routes = [
     '',

@@ -24,6 +24,7 @@ const SenFont = Sen({
   display: "swap"
 })
 export const metadata = {
+  metadataBase: new URL('https://www.meroladecarvalhoadvocacia.com'),
   title: "Elaine Merola Advocacia | Escritório de Advocacia em Campinas-SP",
   description: "Nossos Serviços Jurídicos: Atuação completa, eficiente e personalizada em Direito Previdenciário (planejamento de aposentadoria, revisão de benefícios, INSS), Direito Civil (contratos, responsabilidade civil, sucessões), Direito do Trabalho (reclamações, rescisões, negociações), Direito Penal (defesa criminal, inquéritos, habeas corpus) e Direito de Família (divórcios, guarda, pensão, mediação). Mais de 30 anos de experiência em Campinas-SP.",
   keywords: [
@@ -69,7 +70,7 @@ export const metadata = {
   openGraph: {
     title: "Elaine Merola Advocacia | Escritório de Advocacia em Campinas-SP",
     description: "Nossos Serviços Jurídicos: Atuação completa, eficiente e personalizada em Direito Previdenciário (planejamento de aposentadoria, revisão de benefícios, INSS), Direito Civil (contratos, responsabilidade civil, sucessões), Direito do Trabalho (reclamações, rescisões, negociações), Direito Penal (defesa criminal, inquéritos, habeas corpus) e Direito de Família (divórcios, guarda, pensão, mediação). Mais de 30 anos de experiência em Campinas-SP.",
-    url: "https://site-advocacia-mu.vercel.app/",
+    url: "https://www.meroladecarvalhoadvocacia.com/",
     siteName: "Elaine Merola Advocacia",
     images: [
       {

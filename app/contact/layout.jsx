@@ -14,7 +14,7 @@ export const metadata = {
   openGraph: {
     title: "Contato | Escritório de Advocacia em Campinas-SP",
     description: "Entre em contato com o escritório Elaine Merola Advocacia em Campinas-SP. Agende sua consulta.",
-    url: "https://site-advocacia-mu.vercel.app/contact",
+    url: "https://www.meroladecarvalhoadvocacia.com/contact",
   }
 }
 

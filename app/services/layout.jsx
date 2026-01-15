@@ -19,7 +19,7 @@ export const metadata = {
   openGraph: {
     title: "Serviços Jurídicos | Advocacia em Campinas-SP",
     description: "Serviços jurídicos completos em Campinas-SP: Direito Previdenciário, Civil, Trabalhista, Penal e Família.",
-    url: "https://site-advocacia-mu.vercel.app/services",
+    url: "https://www.meroladecarvalhoadvocacia.com/services",
   }
 }
 

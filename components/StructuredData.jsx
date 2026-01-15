@@ -3,7 +3,7 @@ export default function StructuredData() {
     "@context": "https://schema.org",
     "@type": "LegalService",
     "name": "Elaine Merola Advocacia",
-    "image": "https://site-advocacia-mu.vercel.app/imgs/logo.png",
+    "image": "https://www.meroladecarvalhoadvocacia.com/imgs/logo.png",
     "description": "Escritório de advocacia em Campinas-SP com mais de 30 anos de experiência. Atuamos em Direito Previdenciário, Civil, Trabalhista, Penal e de Família.",
     "address": {
       "@type": "PostalAddress",
@@ -18,7 +18,7 @@ export default function StructuredData() {
       "latitude": "-22.9026",
       "longitude": "-47.0621"
     },
-    "url": "https://site-advocacia-mu.vercel.app",
+    "url": "https://www.meroladecarvalhoadvocacia.com",
     "telephone": "+5519981056106",
     "email": "elainemerolaadvogada@gmail.com",
     "priceRange": "$$",
