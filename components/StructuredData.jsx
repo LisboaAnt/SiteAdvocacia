@@ -88,8 +88,7 @@ export default function StructuredData() {
       ]
     },
     "sameAs": [
-      "https://www.instagram.com/m.c.advocacia",
-      "https://www.instagram.com/elainemerola"
+      "https://www.instagram.com/m.c.advocacia"
     ]
   };
 

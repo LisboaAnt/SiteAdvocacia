@@ -27,12 +27,6 @@ const Footer = () => {
                                 </a>
                             </div>
                             <div className="flex items-start gap-3">
-                                <RiInstagramFill className="h-5 w-5 text-white flex-shrink-0 mt-1" />
-                                <a href="https://www.instagram.com/elainemerola/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200 transition-colors break-all">
-                                    @elainemerola
-                                </a>
-                            </div>
-                            <div className="flex items-start gap-3">
                                 <EnvelopeIcon className="h-5 w-5 text-white flex-shrink-0 mt-1" />
                                 <a href="mailto:elainemerolaadvogada@gmail.com" className="text-white hover:text-gray-200 transition-colors break-all">
                                     elainemerolaadvogada@gmail.com
